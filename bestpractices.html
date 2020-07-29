@@ -51,6 +51,81 @@
     consequatur? Quasi, cum ducimus!
   </p>
 
+  <h2> Folder Structure</h2>
+  <pre>
+        ├── asset
+        │   ├── css
+        │   │   ├── **/*.css
+        │   ├── images
+        │   │   ├── **/*.jpg
+        │   ├── js
+        │   │   ├── **/*.js
+        └── index.html
+    </pre>
+  </code>
+
+
+  <h2>CSS Class/Id Naming</h2>
+
+  <pre>
+    <code>
+      id="someIdentifier" // camelcase
+      id="some-identifier" // Hyphens
+      id="some_identifier" // Underscores
+      id="someidentifier" // Concatenated
+    </code>
+  </pre>
+
+
+  - Use meaningful or generic ID and class names.
+  <pre>
+    <code>
+      /* Not recommended: meaningless */
+      #yee-1901 {}
+
+      /* Not recommended: presentational */
+      .button-green {}
+      .clear {}
+
+
+      /* Recommended: specific */
+      #gallery {}
+      #login {}
+      .video {}
+
+      /* Recommended: generic */
+      .aux {}
+      .alt {}
+  </code>
+</pre>
+
+ - Use ID and class names that are as short as possible but as long as necessary.
+  <pre>
+    <code>
+      /* Not recommended */
+      #navigation {}
+      .atr {}
+
+      /* Recommended */
+      #nav {}
+      .author {}
+    </code>
+  </pre>
+
+  - Separate words in ID and class names by a hyphen.
+  <pre>
+    <code>
+      /* Not recommended: does not separate the words “demo” and “image” */
+      .demoimage {}
+
+      /* Not recommended: uses underscore instead of hyphen */
+      .error_status {}
+
+      /* Recommended */
+      #video-id {}
+      .ads-sample {}
+    </code>
+  </pre>
 </body>
 
 </html>
