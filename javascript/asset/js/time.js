@@ -1,14 +1,10 @@
 // Write a JavaScript program to display the current day and time in the following format.
 // Current time is : 10 PM : 30 : 38
 
-// var today = new Date();
-// var hour = today.getHours();
-// var minute = today.getMinutes();
-// var second = today.getSeconds();
-
-var hour = 00;
-var minute = 00;
-var second = 00;
+var today = new Date();
+var hour = today.getHours();
+var minute = today.getMinutes();
+var second = today.getSeconds();
 
 var prepand = (hour >= 12) ? " PM " : " AM ";
 hour = (hour >= 12) ? hour - 12 : hour;
