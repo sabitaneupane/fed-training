@@ -13,15 +13,12 @@ function handleOnSubmit(event) {
 }
 
 function getGenderValue() {
-  var female = document.getElementById('female');
-  var male = document.getElementById('male');
-  var gender;
-  if (female.checked) {
-    gender = female.value;
-  } else {
-    gender = male.value;
+  var inputElements = document.getElementsByName('gender');
+  for (var i = 0; inputElements[i]; i++) {
+    if (inputElements[i].checked) {
+      return inputElements[i].value;
+    }
   }
-  return gender;
 }
 
 function getEducationLevelValue() {
@@ -35,7 +32,7 @@ function getEducationLevelValue() {
 
 function getInterestValue() {
   var interestData = [];
-  var inputElements = document.getElementsByClassName('interest');
+  var inputElements = document.getElementsByName('interest');
   for (var i = 0; inputElements[i]; i++) {
     if (inputElements[i].checked) {
       interestData.push(inputElements[i].value);
