@@ -4,11 +4,28 @@
 <head>
   <meta charset="utf-8">
   <title>Calculator - JavaScript Courses</title>
+  <style>
+    .calculator-value {
+      background-color: gray;
+      border: 1px solid white;
+      width: 116px;
+      height: 20px;
+      color: white;
+      padding: 5px;
+    }
+  </style>
 </head>
 
 <body>
+  Value: 20, 5
+  <div id="calculator-value" class="calculator-value">
 
-
+  </div>
+  <br />
+  <button onclick="calculate('+')">+</button>
+  <button onclick="calculate('-')">-</button>
+  <button onclick="calculate('*')">*</button>
+  <button onclick="calculate('/')">/</button>
 </body>
 
 <script src="./asset/js/calculator.js"> </script>
