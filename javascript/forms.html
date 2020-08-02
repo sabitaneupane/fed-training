@@ -31,10 +31,10 @@
     <div>
       <label>Gender:</label>
       <label>
-        <input type="radio" id="female" name="gender">Female
+        <input type="radio" id="female" name="gender" value="female" checked>Female
       </label>
       <label>
-        <input type="radio" id="male" name="gender">Male
+        <input type="radio" id="male" name="gender" value="male">Male
       </label>
     </div>
     <hr />
@@ -51,10 +51,15 @@
     <div>
       <label>Interest:</label>
       <br /><label>
-        <input type="checkbox" id="webDev" name="interest" value="Web Development">Web Development
+        <input class="interest" type="checkbox" id="webDevelopment" name="interest" value="Web Development">Web
+        Development
       </label>
       <br /><label>
-        <input type="checkbox" id="wordpressDev" name="interest" value="Wordpress Development">Wordpress Development
+        <input class="interest" type="checkbox" id="wordpressDevelopment" name="interest"
+          value="Wordpress Development">Wordpress Development
+      </label>
+      <br /><label>
+        <input class="interest" type="checkbox" id="others" name="interest" value="Others">Others
       </label>
     </div>
     <hr />
@@ -62,7 +67,6 @@
       <input type="submit" value="Submit">
     </div>
   </form>
-
 </body>
 
 <script>
