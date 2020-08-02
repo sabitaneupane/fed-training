@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Courses</title>
+</head>
+
+<body>
+  <form name="userDetails" id="userDetails" onsubmit=handleOnSubmit(event)>
+    <div>
+      <label>Name:</label>
+      <input type="text" id="name" name="name">
+    </div>
+    <hr />
+    <div>
+      <label>Age:</label>
+      <input type="number" id="age" name="age" min="0" max="100">
+    </div>
+    <hr />
+    <div>
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</body>
+
+<script>
+  function handleOnSubmit(event) {
+    event.preventDefault();
+
+    var name = document.getElementById('name').value;
+    var age = document.getElementById('age').value;
+    console.log(age);
+    if (name === '' && age === '') {
+      console.log("All field are required");
+    } else if (name === '') {
+      console.log("Name field is required");
+    } else if (age === '') {
+      console.log("Age field is required");
+    } else {
+      console.log("Data submitted successfully")
+    }
+  }
+</script>
+
+
+</html>
