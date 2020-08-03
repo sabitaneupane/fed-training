@@ -7,41 +7,43 @@
 </head>
 
 <body>
-  <form name="userDetails" id="userDetails" onsubmit=handleOnSubmit(event)>
+
+  <form onsubmit="handleOnSubmit(event)" action="form.php">
     <div>
-      <label>Name:</label>
-      <input type="text" id="name" name="name">
+      <label> Full name</label>
+      <input type="text" id="fullname"/>
+      <p id="error-msg"> </p>
     </div>
-    <hr />
     <div>
-      <label>Age:</label>
-      <input type="number" id="age" name="age" min="0" max="100">
+      <label> Age </label>
+      <input type="number" min="0" max="100" id="age" />
     </div>
-    <hr />
+
     <div>
-      <input type="submit" value="Submit">
+      <input type="submit" value="click me" />
     </div>
   </form>
 </body>
 
 <script>
-  function handleOnSubmit(event) {
-    event.preventDefault();
 
-    var name = document.getElementById('name').value;
-    var age = document.getElementById('age').value;
-    console.log(age);
-    if (name === '' && age === '') {
-      console.log("All field are required");
-    } else if (name === '') {
-      console.log("Name field is required");
-    } else if (age === '') {
-      console.log("Age field is required");
+  function handleOnSubmit(event) {
+    console.log(event);
+    event.preventDefault();
+    var fullname = document.getElementById("fullname");
+    var age = document.getElementById("age");
+    var errorMsg = document.getElementById("error-msg");
+
+    if (fullname.value === '') {
+      errorMsg.innerHTML = "Please enter your fullname";
+      console.log("Please enter your fullname");
+    } else if (age.value === '') {
+      console.log("Please enter your age");
     } else {
-      console.log("Data submitted successfully")
+      console.log("Your details submitted successfully")
     }
   }
-</script>
 
+</script>
 
 </html>
