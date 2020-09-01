@@ -1,18 +1,18 @@
-let { 
-  createStudentList, 
-  getStudentsList, 
-  editStudentList, 
-  updateStudentsList, 
-  deleteStudentList 
+let {
+  listStudentsList,
+  viewStudentDetails,
+  createStudentList,
+  updateStudentList,
+  deleteStudentList
 } = require('../controllers/student.controllers');
 
 let express = require('express');
 let router = express.Router();
 
-router.get('/', getStudentsList);
-router.post('/create-student', createStudentList);
-router.get('/edit-student/:id', editStudentList);
-router.put('/update-student/:id', updateStudentsList);
-router.delete('/delete-student/:id', deleteStudentList);
+router.get('/', listStudentsList);
+router.get('/:id', viewStudentDetails);
+router.post('/create', createStudentList);
+router.put('/update/:id', updateStudentList);
+router.delete('/delete/:id', deleteStudentList);
 
 module.exports = router;

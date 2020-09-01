@@ -7,7 +7,7 @@ const db = require('./database/connection');
 const studentRoute = require('./routes/student.route')
 
 // Connecting mongoDB Database
-db.connection(); 
+db.connection();
 
 const app = express();
 app.use(bodyParser.json());
@@ -23,6 +23,7 @@ const server = app.listen(port, () => {
 })
 
 // Express Route
+app.get('/', (req, res) => res.status(200).json({ status: 'API is working fine.' }));
 app.use('/students', studentRoute);
 
 // 404 Error
